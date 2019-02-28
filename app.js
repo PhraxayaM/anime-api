@@ -10,6 +10,7 @@ app.get("/", (req, res) => {
       console.log('error:', error);
       console.log('statusCode:', response && response.statusCode); 
       console.log('body:', body); 
+      res.json(body)
     });
 })
 
