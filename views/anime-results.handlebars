@@ -1,0 +1,10 @@
+<!-- views/anime-results.handlebars -->
+
+
+<h1>Results</h1>
+{{#each anime}}
+    <li>{{this.title}}</li>
+    <!-- <a href="/movies/{{this.id}}"> -->
+        <img src="{{this.image_url}}">
+    </a>
+{{/each}}
