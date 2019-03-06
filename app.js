@@ -6,6 +6,9 @@ const request = require("request")
 const jikanjs  = require('jikanjs');
 const port = 8080
 const url = "https://api.jikan.moe/v3/search/anime/?q=Fate/Zero&page=1"
+require('./controllers/auth.js')(app);
+// Set db
+require('./data/reddit-db');
 
 // Use Body Parser
 app.use(bodyParser.json());
