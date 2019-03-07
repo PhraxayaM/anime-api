@@ -25,4 +25,14 @@ module.exports = (app) => {
        return res.status(400).send({ err: err });
      });
  });
+ // LOGIN FORM
+ app.get('/login', (req, res) => {
+   res.render('login');
+ });
+
+ // LOGOUT
+   app.get('/logout', (req, res) => {
+     res.clearCookie('nToken');
+     res.redirect('/');
+   });
 };
