@@ -6,13 +6,18 @@
             <a class="navbar-brand" href="/">
                 Anime Api
             </a>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/logout">Logout</a></li>
-                <li>
-                    <a href="/login">Login</a>
-                </li>
-                <li><a href="/sign-up">Sign Up</a></li>
-            </ul>
         </div>
+
+        {{#if currentUser}}
+            <div class="pull-right">
+                <a href="/logout">Logout</a>
+            </div>
+        {{else}}
+            <div class="pull-right">
+                <a class="btn btn-primary navbar-btn" href="/login">Login</a>
+                <a class="btn btn-primary navbar-btn" href="/sign-up">Sign Up</a>
+            </div>
+        {{/if}}
+
     </div>
 </nav>
