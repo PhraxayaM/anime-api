@@ -9,7 +9,7 @@ const port = 8080
 const url = "https://api.jikan.moe/v3/search/anime/?q=Fate/Zero&page=1"
 var cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
-require('./controllers/auth.js')(app);
+
 // Set db
 require('./data/reddit-db');
 app.use(cookieParser()); // Add this after you initialize express.
@@ -44,6 +44,7 @@ app.get("/", (req, res) => {
 })
 
 const search = require('./controllers/search')(app);
+const auth = require('./controllers/auth.js')(app);
 
 app.listen(port, () => {
     console.log("The app is live on", port)
