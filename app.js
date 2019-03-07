@@ -22,26 +22,20 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-// app.get("/", (req, res) => {
-//     // res.json("Welcome to the car api")
-//     request(url, function (error, response, body) {
-//       console.log('error:', error);
-//       console.log('statusCode:', response && response.statusCode);
-//       console.log('body:', body);
-//       res.json(body)
-//     });
-// })
 
-app.get("/", (req, res) => {
-    res.render("index", {})
-    // jikanjs.loadAnime(19815, 'episodes').then((response) => {
-    //     response.episodes.forEach(element => {
-    //         console.log(`${element.episode_id}: ${element.title} - ${element.title_romanji} - ${element.title_japanese}`);
-    //     })
-    // }).catch((err) => {
-    //     console.error(err); // in case a error happens
-    // });
-})
+var checkAuth = (req, res, next) => {
+  console.log("Checking authentication");
+  if (typeof req.cookies.nToken === "undefined" || req.cookies.nToken === null) {
+    req.user = null;
+  } else {
+    var token = req.cookies.nToken;
+    var decodedToken = jwt.decode(token, { complete: true }) || {};
+    req.user = decodedToken.payload;
+  }
+
+  next();
+};
+app.use(checkAuth);
 
 const search = require('./controllers/search')(app);
 const auth = require('./controllers/auth.js')(app);
