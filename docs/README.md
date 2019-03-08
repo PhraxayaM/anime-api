@@ -13,7 +13,7 @@
 
 ### Links
 
-- [Documentation](https://docsify.js.org)
+- [Documentation](https://phraxayam.github.io/anime-api/)
 
 
 ### Features
