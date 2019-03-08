@@ -5,7 +5,7 @@ const app =  express()
 const bodyParser = require('body-parser');
 const request = require("request")
 const jikanjs  = require('jikanjs');
-const port = 8080
+const port = process.env.PORT || 8080;
 const url = "https://api.jikan.moe/v3/search/anime/?q=Fate/Zero&page=1"
 var cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
