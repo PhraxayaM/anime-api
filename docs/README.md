@@ -1,8 +1,8 @@
 # Search for Anime!
 
 <p align="center">
-  <a href="https://docsify.js.org">
-    <img alt="docsify" src="./docs/_media/icon.svg">
+  <a href="hhttps://github.com/PhraxayaM/anime-api/tree/master">
+    <img alt="Anime" src="https://img4.goodfon.com/wallpaper/nbig/d/f7/goku-super-saiyan-blue-god-god-by-rmehedi-dragon-ball-dragon.jpg">
   </a>
 </p>
 
