@@ -13,7 +13,8 @@
 
 ### Links
 
-- [Documentation](https://phraxayam.github.io/anime-api/)
+- [Docsify](https://phraxayam.github.io/anime-api/)
+- [Website Demo](https://api-project-m-r.herokuapp.com/)
 
 
 ### Features
