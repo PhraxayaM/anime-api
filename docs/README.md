@@ -1,4 +1,4 @@
-# Headline
+# Search for Anime!
 
 <p align="center">
   <a href="https://docsify.js.org">
@@ -10,11 +10,6 @@
   A place for you to search for Anime.
 </p>
 
-<p align="center">
-  <a href="https://opencollective.com/docsify/order/3254">
-    <img src="https://opencollective.com/docsify/tiers/gold-sponsor.svg?avatarHeight=36">
-  </a>
-</p>
 
 ### Links
 
