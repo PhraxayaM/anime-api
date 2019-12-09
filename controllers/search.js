@@ -7,7 +7,7 @@ module.exports = (app) => {
     app.get("/", (req, res) => {
         var currentUser = req.user;
         if (currentUser) {
-            res.render("index", {currentUser})
+            res.render("search", {currentUser})
         } else {
             res.render("login")
         }
